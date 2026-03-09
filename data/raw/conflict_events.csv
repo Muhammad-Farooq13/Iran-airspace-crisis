@@ -1,0 +1,29 @@
+date,time_utc,location,latitude,longitude,event_type,aviation_impact,severity,source
+2026-02-28,21:02:00,Natanz Nuclear Facility (Isfahan),33.7225,51.7261,US Airstrike - Precision Strike,Immediate Iranian FIR closure,CRITICAL,Reuters / AP / Flightradar24
+2026-02-28,21:15:00,Fordow Nuclear Facility (Qom),34.8846,50.5925,US Airstrike - Bunker Buster,Qom regional no-fly zone established,CRITICAL,BBC World / FlightAware
+2026-02-28,21:45:00,Parchin Military Complex (Tehran),35.5233,51.7760,US Airstrike - Military Strike,Tehran FIR emergency closure declared,CRITICAL,AP / CAOI Advisory
+2026-02-28,22:10:00,Shahid Dastghaib AFB (Shiraz),29.4752,52.5903,Military airbase attack,Shiraz civilian airport suspended,HIGH,ADS-B Exchange data loss / EASA
+2026-02-28,22:30:00,Bandar Abbas Naval Base,27.2220,56.3777,Naval and air facility strike,Gulf of Oman routing advisory issued,HIGH,ICAO AISM / FlightAware
+2026-02-28,23:00:00,Persian Gulf - Strait of Hormuz,26.6000,56.4000,Missile launches detected,Emergency SIGMET - Hormuz airspace,CRITICAL,EASA Safety Information Bulletin
+2026-03-01,00:15:00,Israeli-Gaza border airspace,31.5000,34.7500,IDF intercept operations,Tel Aviv FIR restricted sectors expanded,HIGH,IAA NOTAM A0660/26
+2026-03-01,01:30:00,Arak Heavy Water Reactor,34.3460,49.2169,US Airstrike - Follow-on strike,Central Iran FIR buffer extended,CRITICAL,Pentagon Press Briefing / Reuters
+2026-03-01,03:00:00,Bushehr Power Plant (vicinity),28.8307,50.9091,Precautionary military zone,Gulf coast routing restricted FL250-,HIGH,GACA Saudi / CAA UAE NOTAM
+2026-03-01,05:45:00,Tabriz Military Airbase,38.1330,46.2351,Airstrike - Secondary target,Northwestern Iranian FIR closed,HIGH,AP / ADS-B Exchange
+2026-03-01,06:00:00,Republic of Iraq - Baghdad,33.3152,44.3661,Iranian retaliatory missile launch,Iraqi FIR temporary shutdown,HIGH,CAAC Iraq Emergency NOTAM
+2026-03-01,09:00:00,Syrian-Iraqi border,34.0000,40.5000,Drone / cruise missile transit,Syria FIR caution advisory,MEDIUM,ADS-B Exchange / Bellingcat
+2026-03-01,11:00:00,International Waters - Gulf of Oman,22.0000,59.0000,US Navy / Iranian naval confrontation,Oman coastal airspace advisory,MEDIUM,Oman CAA NOTAM A0311/26
+2026-03-01,14:00:00,Houthi launch sites (Yemen),15.5527,32.5324,IRGC-backed Houthi missile launch,Yemen FIR extended hostilities advisory,HIGH,CAMA Yemen / UNOSAT
+2026-03-01,16:00:00,Kharg Island Oil Terminal,29.2398,50.3333,Airstrike - Energy infrastructure,Gulf airspace traffic diversion order,CRITICAL,FlightAware / Reuters
+2026-03-02,02:00:00,Esfahan FIR boundary,32.6560,51.6774,IRGC ballistic missile test-launch,Prolonged Iranian FIR closure,HIGH,CAOI Emergency Advisory
+2026-03-02,08:00:00,Tehran - IRGC HQ vicinity,35.7219,51.3347,US Follow-on Airstrike,Tehran FIR closure extended D+3,CRITICAL,Pentagon / AP
+2026-03-02,12:00:00,Caspian Sea - northern sector,42.0000,51.0000,Russian-Iranian security consultation,Caspian FIR voluntary deviation advised,MEDIUM,Rosaviatsia Advisory
+2026-03-03,07:00:00,Strait of Hormuz,26.6000,56.4000,Naval vessel interception,Hormuz transit SIGMETs reissued,HIGH,ICAO Bulletin / EASA SIB
+2026-03-03,14:00:00,Herat Province (Afghanistan),34.3482,62.2041,Spillover ground activity,Afghan FIR monitoring alert,MEDIUM,ACAA / UN OCHA
+2026-03-04,06:00:00,Qeshm Island,26.7568,55.9283,Military naval activity,Gulf of Oman routing advisory extended,HIGH,CAA UAE / GACA Saudi
+2026-03-04,16:00:00,Sanandaj - Kurdish region (Iran),35.3147,46.9983,Airstrike - Day 5 operations,Northwestern Iran FIR fully closed,HIGH,Kurdistan24 / Reuters
+2026-03-05,10:00:00,UN Security Council - Emergency Session,40.7489,-73.9680,Diplomatic event,ICAO emergency coordination meeting called,LOW,ICAO Press Release
+2026-03-05,18:00:00,Tabriz - Day 6 strikes,38.0962,46.2738,Continued airstrike operations,Northern Iranian FIR buffer zone maintained,HIGH,AP / BBC
+2026-03-06,08:00:00,Ahvaz International (Area),31.3373,48.7622,Ground conflict reported near airport,Ahvaz Airport suspended operations,HIGH,CAOI / ADS-B Exchange
+2026-03-06,14:00:00,Persian Gulf - US Carrier Group,26.0000,54.5000,US carrier strike group repositioning,Gulf of Oman military airspace expanded,HIGH,US CENTCOM / ICAO
+2026-03-07,09:00:00,Mashhad - eastern Iran,36.2699,59.5535,Day 8 operations - Mashhad region,Mashhad FIR remains fully closed,CRITICAL,EASA SIB Update / AP
+2026-03-07,13:00:00,Strait of Hormuz - tanker activity,26.5500,56.3800,Tanker vessel diversion - oil supply,Hormuz SIGMET active - all civil traffic,HIGH,Lloyd's Maritime / Reuters

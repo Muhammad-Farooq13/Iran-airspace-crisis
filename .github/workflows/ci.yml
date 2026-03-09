@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Lint (ruff)
+        run: ruff check src/ tests/
+
+      - name: Format check (black)
+        run: black --check src/ tests/
+
+      - name: Run data pipeline
+        run: python -m src.data.pipeline --step all
+
+      - name: Build feature matrix
+        run: python -m src.features.build_features
+
+      - name: Train models
+        run: python -m src.models.train
+
+      - name: Run tests with coverage
+        run: pytest tests/ -v --tb=short --cov=src --cov-report=xml
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        with:
+          file: coverage.xml
+          fail_ci_if_error: false
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t airline-loss-predictor:latest .
+
+      - name: Smoke test Docker container
+        run: |
+          docker run -d -p 8000:8000 --name test-api airline-loss-predictor:latest
+          sleep 10
+          curl --fail http://localhost:8000/ || (docker logs test-api && exit 1)
+          docker stop test-api

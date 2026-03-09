@@ -1,0 +1,36 @@
+airline,country,estimated_daily_loss_usd,cancelled_flights,rerouted_flights,additional_fuel_cost_usd,passengers_impacted
+Emirates,UAE,4200000,18,62,2835200,9180
+Qatar Airways,Qatar,3100000,12,41,1765800,6540
+Etihad Airways,UAE,1800000,8,29,1023400,4320
+Turkish Airlines,Turkey,2400000,14,38,1432600,7700
+British Airways,UK,1950000,6,32,1185600,4680
+Lufthansa,Germany,1650000,5,28,988000,3950
+Air France,France,1420000,4,25,856000,3400
+KLM,Netherlands,1180000,3,21,702800,2800
+Singapore Airlines,Singapore,2100000,7,35,1274000,5110
+Cathay Pacific,Hong Kong,1870000,6,31,1120600,4560
+Malaysia Airlines,Malaysia,1340000,4,23,806200,3220
+Air India,India,1560000,5,26,916800,3760
+PIA,Pakistan,820000,6,15,520400,2460
+Saudia,Saudi Arabia,1240000,9,18,648000,4320
+Gulf Air,Bahrain,680000,5,12,424000,2240
+Oman Air,Oman,590000,4,11,374000,1960
+flydubai,UAE,680000,7,13,470000,2800
+Korean Air,South Korea,1650000,5,26,925800,3750
+Asiana Airlines,South Korea,1120000,4,19,652000,2680
+Japan Airlines,Japan,1480000,5,24,840000,3360
+ANA,Japan,1350000,4,22,768000,3080
+Thai Airways,Thailand,1020000,3,18,624000,2700
+Aeroflot,Russia,1180000,6,22,780000,4040
+El Al,Israel,2800000,12,0,0,3980
+Royal Jordanian,Jordan,420000,3,8,272000,1140
+EgyptAir,Egypt,380000,2,7,234000,1020
+Iberia,Spain,940000,3,16,558000,2280
+Austrian Airlines,Austria,620000,2,11,376000,1540
+Swiss International,Switzerland,710000,2,12,412000,1680
+SAS,Scandinavia,680000,2,11,376800,1540
+Finnair,Finland,540000,2,9,312000,1260
+LOT Polish Airlines,Poland,480000,2,8,276000,1120
+China Eastern,China,1620000,5,27,952000,3780
+China Southern,China,1590000,5,26,924000,3700
+Air China,China,1680000,5,28,980000,3920

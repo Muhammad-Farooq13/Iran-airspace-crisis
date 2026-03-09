@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name            = "iran-airspace-crisis"
+version         = "1.0.0"
+description     = "End-to-end ML project: predicting airline financial losses from the Iran Airspace Crisis (Feb–Mar 2026)"
+requires-python = ">=3.11"
+readme          = "README.md"
+license         = { text = "MIT" }
+authors         = [{ name = "Muhammad Farooq", email = "mfarooqshafee333@gmail.com" }]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+# ── Ruff linting ──────────────────────────────────────────────────────────────
+[tool.ruff]
+line-length    = 100
+target-version = "py311"
+select         = ["E", "F", "I", "N", "W", "UP"]
+ignore         = ["E501"]
+
+# ── Black formatting ──────────────────────────────────────────────────────────
+[tool.black]
+line-length    = 100
+target-version = ["py311"]
+
+# ── Pytest ────────────────────────────────────────────────────────────────────
+[tool.pytest.ini_options]
+testpaths    = ["tests"]
+addopts      = "-v --tb=short --cov=src --cov-report=term-missing"
+python_files = "test_*.py"
+
+# ── Mypy ──────────────────────────────────────────────────────────────────────
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true

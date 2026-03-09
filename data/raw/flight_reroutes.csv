@@ -1,0 +1,46 @@
+flight_id,airline,original_route,diverted_route,additional_distance_km,additional_fuel_cost_usd,delay_minutes
+EK0201-20260301,Emirates,LHR-DXB via standard Gulf,LHR-DXB via Southern Red Sea,620,48400,55
+EK0203-20260301,Emirates,LHR-DXB via standard Gulf,LHR-DXB via Southern Red Sea,620,48400,52
+BA0105-20260301,British Airways,LHR-SIN via Muscat/Gulf,LHR-SIN via Cairo/Colombo,980,76440,88
+BA0107-20260302,British Airways,LHR-SIN via Muscat/Gulf,LHR-SIN via Cairo/Colombo,980,76440,91
+LH0760-20260301,Lufthansa,FRA-BOM via Gulf,FRA-BOM via Egypt/Red Sea,870,67860,77
+LH0762-20260302,Lufthansa,FRA-BOM via Gulf,FRA-BOM via Egypt/Red Sea,870,67860,80
+AF0218-20260301,Air France,CDG-BOM via Gulf,CDG-BOM via Egypt/Red Sea,850,66300,75
+AF0220-20260302,Air France,CDG-BOM via Gulf,CDG-BOM via Egypt/Red Sea,850,66300,72
+QR0007-20260301,Qatar Airways,DOH-LHR via standard route,DOH-LHR via southern deviation,410,31980,38
+QR0009-20260302,Qatar Airways,DOH-LHR via standard route,DOH-LHR via southern deviation,410,31980,35
+EY0103-20260301,Etihad Airways,AUH-LHR via standard route,AUH-LHR via southern deviation,440,34320,42
+EY0105-20260302,Etihad Airways,AUH-LHR via standard route,AUH-LHR via southern deviation,440,34320,40
+TK0786-20260301,Turkish Airlines,IST-DXB via standard,IST-DXB via Black Sea/Saudi,560,43680,50
+TK0788-20260302,Turkish Airlines,IST-DXB via standard,IST-DXB via Black Sea/Saudi,560,43680,48
+SU0580-20260302,Aeroflot,SVO-DXB via Caspian,SVO-DXB via Caucasus/Turkey,730,56940,65
+SU0582-20260303,Aeroflot,SVO-DXB via Caspian,SVO-DXB via Caucasus/Turkey,730,56940,68
+AI0910-20260301,Air India,DEL-LHR via Gulf/Iran,DEL-LHR via India Ocean/Africa,1140,88920,102
+AI0912-20260302,Air India,DEL-LHR via Gulf/Iran,DEL-LHR via India Ocean/Africa,1140,88920,98
+PK0702-20260302,PIA,KHI-LHR via Gulf/Iran,KHI-LHR via Oman/Egypt,980,76440,88
+PK0704-20260303,PIA,KHI-LHR via Gulf/Iran,KHI-LHR via Oman/Egypt,980,76440,85
+WY0101-20260301,Oman Air,MCT-LHR via standard,MCT-LHR via southern Red Sea,520,40560,47
+WY0103-20260302,Oman Air,MCT-LHR via standard,MCT-LHR via southern Red Sea,520,40560,44
+KL0431-20260301,KLM,AMS-DXB via standard,AMS-DXB via Egypt,610,47580,54
+KL0433-20260302,KLM,AMS-DXB via standard,AMS-DXB via Egypt,610,47580,51
+MS0777-20260301,EgyptAir,CAI-DXB via standard,CAI-DXB via Red Sea coastal,280,21840,25
+MS0779-20260302,EgyptAir,CAI-DXB via standard,CAI-DXB via Red Sea coastal,280,21840,23
+IB0005-20260301,Iberia,MAD-DXB via standard,MAD-DXB via Africa/Egypt,890,69420,80
+IB0007-20260302,Iberia,MAD-DXB via standard,MAD-DXB via Africa/Egypt,890,69420,77
+SQ0317-20260301,Singapore Airlines,SIN-LHR via Gulf,SIN-LHR via Southern Indian Ocean,1200,93600,108
+SQ0319-20260302,Singapore Airlines,SIN-LHR via Gulf,SIN-LHR via Southern Indian Ocean,1200,93600,105
+CX0253-20260301,Cathay Pacific,HKG-LHR via Gulf,HKG-LHR via Africa/Southern route,1350,105300,122
+CX0255-20260302,Cathay Pacific,HKG-LHR via Gulf,HKG-LHR via Africa/Southern route,1350,105300,118
+OZ0501-20260301,Asiana Airlines,ICN-LHR via Gulf,ICN-LHR via Siberia/Northern Europe,890,69420,80
+KE0901-20260301,Korean Air,ICN-DXB via Iran,ICN-DXB via Caspian/Turkey,770,60060,70
+KE0903-20260302,Korean Air,ICN-DXB via Iran,ICN-DXB via Caspian/Turkey,770,60060,67
+MH0002-20260301,Malaysia Airlines,KUL-LHR via Gulf,KUL-LHR via Africa,1100,85800,99
+MH0004-20260302,Malaysia Airlines,KUL-LHR via Gulf,KUL-LHR via Africa,1100,85800,96
+GF0001-20260301,Gulf Air,BAH-LHR via standard,BAH-LHR via Red Sea/Egypt,540,42120,49
+GF0003-20260302,Gulf Air,BAH-LHR via standard,BAH-LHR via Red Sea/Egypt,540,42120,46
+SV0101-20260301,Saudia,RUH-LHR via standard,RUH-LHR via Red Sea/Egypt,480,37440,43
+SV0103-20260302,Saudia,RUH-LHR via standard,RUH-LHR via Red Sea/Egypt,480,37440,41
+FZ0101-20260301,flydubai,DXB-BEY via standard,DXB-BEY via Egyptian route,310,24180,28
+FZ0103-20260302,flydubai,DXB-BEY via standard,DXC-BEY via Egyptian route,310,24180,26
+EK0502-20260303,Emirates,DXB-BKK via standard Gulf exit,DXB-BKK via Oman/India,560,43680,50
+QR0701-20260303,Qatar Airways,DOH-BKK via standard,DOH-BKK via Oman/India,540,42120,48

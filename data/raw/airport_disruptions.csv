@@ -1,0 +1,36 @@
+airport,iata,icao,country,latitude,longitude,flights_cancelled,flights_delayed,flights_diverted,runway_status
+Dubai International,DXB,OMDB,UAE,25.2532,55.3657,87,112,24,FULLY OPERATIONAL
+Hamad International,DOH,OTHH,Qatar,25.2736,51.6080,62,78,18,FULLY OPERATIONAL
+Ben Gurion International,TLV,LLBG,Israel,32.0114,34.8866,128,41,0,RESTRICTED - Security Alert
+Istanbul Airport,IST,LTFM,Turkey,41.2753,28.7519,44,67,12,FULLY OPERATIONAL
+Muscat International,MCT,OOMS,Oman,23.5933,58.2844,38,54,10,FULLY OPERATIONAL
+Heathrow,LHR,EGLL,UK,51.4700,-0.4543,22,44,6,FULLY OPERATIONAL
+Kuwait International,KWI,OKBK,Kuwait,29.2266,47.9689,46,58,14,RESTRICTED - Conflict Proximity
+Bahrain International,BAH,OBBI,Bahrain,26.2708,50.6336,34,48,10,RESTRICTED - Military Sector
+King Abdulaziz International,JED,OEJN,Saudi Arabia,21.6796,39.1565,52,71,15,FULLY OPERATIONAL
+King Khalid International,RUH,OERK,Saudi Arabia,24.9578,46.6988,41,58,13,FULLY OPERATIONAL
+Baku International,GYD,UBBB,Azerbaijan,40.4675,50.0467,28,36,8,RESTRICTED - Airspace Buffer
+Karachi Jinnah International,KHI,OPKC,Pakistan,24.9065,67.1609,35,44,10,RESTRICTED - NOTAM Active
+Lahore Allama Iqbal,LHE,OPLA,Pakistan,31.5216,74.4036,22,31,7,RESTRICTED - NOTAM Active
+Amman Queen Alia,AMM,OJAI,Jordan,31.7226,35.9932,24,35,8,FULLY OPERATIONAL
+Frankfurt,FRA,EDDF,Germany,50.0379,8.5622,18,32,5,FULLY OPERATIONAL
+Charles de Gaulle,CDG,LFPG,France,49.0097,2.5479,16,28,4,FULLY OPERATIONAL
+Amsterdam Schiphol,AMS,EHAM,Netherlands,52.3086,4.7639,15,27,4,FULLY OPERATIONAL
+Tehran Imam Khomeini,IKA,OIIE,Iran,35.4161,51.1522,210,0,0,CLOSED - Conflict Zone
+Mashhad International,MHD,OIMM,Iran,36.2352,59.6400,62,0,0,CLOSED - Conflict Zone
+Isfahan International,IFN,OIFM,Iran,32.7508,51.8613,48,0,0,CLOSED - Conflict Zone
+Shiraz International,SYZ,OISS,Iran,29.5392,52.5898,36,0,0,CLOSED - Conflict Zone
+Indira Gandhi International,DEL,VIDP,India,28.5562,77.1000,28,38,7,FULLY OPERATIONAL
+Abu Dhabi International,AUH,OMAA,UAE,24.4330,54.6511,42,56,13,FULLY OPERATIONAL
+Sharjah International,SHJ,OMSJ,UAE,25.3285,55.5172,31,41,9,FULLY OPERATIONAL
+Domodedovo International,DME,UUDD,Russia,55.4088,37.9063,18,24,5,PARTIALLY RESTRICTED
+Sheremetyevo International,SVO,UUEE,Russia,55.9726,37.4146,21,28,6,PARTIALLY RESTRICTED
+Cairo International,CAI,HECA,Egypt,30.1219,31.4056,14,22,4,FULLY OPERATIONAL
+Larnaca International,LCA,LCLK,Cyprus,34.8751,33.6249,12,18,3,ADVISORY ACTIVE
+Yerevan Zvartnots,EVN,UDYZ,Armenia,40.1473,44.3959,16,22,5,RESTRICTED - NOTAM Active
+Tbilisi International,TBS,UGTB,Georgia,41.6693,44.9547,12,16,4,PARTIALLY RESTRICTED
+Princess Juliana / Curacao,AUA,TNCA,Aruba,12.5014,-70.0152,3,5,1,FULLY OPERATIONAL
+Singapore Changi,SIN,WSSS,Singapore,1.3644,103.9915,15,22,4,FULLY OPERATIONAL
+Hong Kong International,HKG,VHHH,Hong Kong,22.3080,113.9185,16,24,5,FULLY OPERATIONAL
+Incheon International,ICN,RKSI,South Korea,37.4602,126.4407,19,26,6,FULLY OPERATIONAL
+Tokyo Narita,NRT,RJAA,Japan,35.7720,140.3929,17,23,5,FULLY OPERATIONAL

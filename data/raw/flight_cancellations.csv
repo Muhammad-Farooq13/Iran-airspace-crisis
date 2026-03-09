@@ -1,0 +1,51 @@
+date,airport,country,airline,flight_number,origin,destination,cancellation_reason,aircraft_type
+2026-02-28,Dubai International (DXB),UAE,Emirates,EK0912,DXB,IKA,Airspace closed - Iranian FIR shutdown,Boeing 777-300ER
+2026-02-28,Tehran Imam Khomeini (IKA),Iran,Iran Air,IR0702,IKA,DXB,Airspace closed - CAOI emergency NOTAM,Airbus A320-200
+2026-02-28,Ben Gurion International (TLV),Israel,El Al,LY0082,TLV,JFK,Full airspace closure - IAA emergency,Boeing 787-9
+2026-02-28,Ben Gurion International (TLV),Israel,Wizz Air,W60001,TLV,LTN,Full airspace closure - IAA emergency,Airbus A321-200
+2026-03-01,Hamad International (DOH),Qatar,Qatar Airways,QR0502,DOH,IKA,Destination airspace closed,Airbus A350-900
+2026-03-01,Hamad International (DOH),Qatar,Qatar Airways,QR0716,DOH,THR,Destination airspace closed,Boeing 777-200LR
+2026-03-01,Dubai International (DXB),UAE,Emirates,EK0914,DXB,IKA,Airspace closed - Iranian FIR shutdown,Boeing 777-300ER
+2026-03-01,Dubai International (DXB),UAE,flydubai,FZ0880,DXB,MHD,Destination country closed,Boeing 737 MAX 8
+2026-03-01,Dubai International (DXB),UAE,flydubai,FZ0440,DXB,AWZ,Destination airspace restriction,Boeing 737-800
+2026-03-01,Kuwait International (KWI),Kuwait,Kuwait Airways,KU0412,KWI,IKA,Airspace closed - conflict proximity,Airbus A330-200
+2026-03-01,Bahrain International (BAH),Bahrain,Gulf Air,GF0502,BAH,IKA,Airspace closed - conflict proximity,Boeing 787-9
+2026-03-01,King Abdulaziz International (JED),Saudi Arabia,Saudia,SV0890,JED,IKA,Precautionary cancellation - conflict zone,Boeing 777-300ER
+2026-03-01,King Khalid International (RUH),Saudi Arabia,Saudia,SV0320,RUH,IKA,Precautionary cancellation,Boeing 787-9
+2026-03-01,Ataturk / Istanbul Airport (IST),Turkey,Turkish Airlines,TK0786,IST,IKA,Airspace closure - Iranian FIR,Boeing 737-900ER
+2026-03-01,Ataturk / Istanbul Airport (IST),Turkey,Turkish Airlines,TK0788,IST,THR,Airspace closure - Iranian FIR,Airbus A321-200
+2026-03-01,Ataturk / Istanbul Airport (IST),Turkey,Turkish Airlines,TK0810,IST,MHD,Airspace closure - Iranian FIR,Boeing 737-800
+2026-03-01,Sheremetyevo International (SVO),Russia,Aeroflot,SU0512,SVO,IKA,Airspace closed - Iranian FIR,Airbus A330-300
+2026-03-01,Heathrow (LHR),UK,British Airways,BA0156,LHR,DXB,Precautionary Gulf sector reroute,Boeing 777-300ER
+2026-03-01,Frankfurt (FRA),Germany,Lufthansa,LH0600,FRA,DXB,Precautionary Gulf routing advisory,Airbus A340-600
+2026-03-01,Charles de Gaulle (CDG),France,Air France,AF0388,CDG,DXB,Precautionary Gulf sector deviation,Boeing 777-200ER
+2026-03-01,Indira Gandhi International (DEL),India,Air India,AI0910,DEL,DXB,Precautionary advisory - Gulf routing,Boeing 787-8
+2026-03-01,Muscat International (MCT),Oman,Oman Air,WY0412,MCT,IKA,Airspace closure,Boeing 737 MAX 8
+2026-03-01,Muscat International (MCT),Oman,Oman Air,WY0816,MCT,KIH,Airspace closure,Boeing 737-800
+2026-03-02,Hamad International (DOH),Qatar,Qatar Airways,QR0810,DOH,BND,Airspace closed - Iranian FIR,Airbus A320-200
+2026-03-02,Dubai International (DXB),UAE,Emirates,EK0916,DXB,IKA,Airspace closure continued,Boeing 777-300ER
+2026-03-02,Dubai International (DXB),UAE,Etihad Airways,EY0412,DXB,IKA,Airspace closure continued,Boeing 787-9
+2026-03-02,Ben Gurion International (TLV),Israel,El Al,LY0090,TLV,LAX,Full airspace closure - IAA emergency,Boeing 787-9
+2026-03-02,King Abdulaziz International (JED),Saudi Arabia,Saudia,SV0892,JED,BND,Airspace closure - conflict zone,Airbus A321-200
+2026-03-02,Ataturk / Istanbul Airport (IST),Turkey,Turkish Airlines,TK0790,IST,AWZ,Airspace closure - Iranian FIR,Boeing 737-900ER
+2026-03-02,Baku International (GYD),Azerbaijan,AZAL,J20412,GYD,IKA,Airspace closed adjacently,Airbus A320-200
+2026-03-02,Karachi Jinnah International (KHI),Pakistan,PIA,PK0380,KHI,IKA,Precautionary cancellation,Boeing 777-200ER
+2026-03-02,Lahore Allama Iqbal (LHE),Pakistan,PIA,PK0490,LHE,IKA,Precautionary cancellation,Airbus A320-200
+2026-03-03,Hamad International (DOH),Qatar,Qatar Airways,QR0820,DOH,IKA,Airspace closed - ongoing conflict,Airbus A350-900
+2026-03-03,Heathrow (LHR),UK,British Airways,BA0158,LHR,DXB,Precautionary Gulf sector concern,Boeing 787-9
+2026-03-03,Amsterdam Schiphol (AMS),Netherlands,KLM,KL0430,AMS,DXB,Precautionary Gulf routing,Boeing 777-200ER
+2026-03-03,Dubai International (DXB),UAE,Emirates,EK0920,DXB,KIH,Destination airspace restricted,Boeing 737 MAX 9
+2026-03-04,Dubai International (DXB),UAE,flydubai,FZ0890,DXB,IFN,Destination airspace restricted,Boeing 737-800
+2026-03-04,Hamad International (DOH),Qatar,Qatar Airways,QR0714,DOH,MHD,Destination airspace restricted,Boeing 777-300ER
+2026-03-04,King Khalid International (RUH),Saudi Arabia,Saudia,SV0330,RUH,MHD,Airspace closure,Airbus A330-300
+2026-03-05,Ben Gurion International (TLV),Israel,El Al,LY0100,TLV,CDG,Full airspace closure continues,Boeing 787-9
+2026-03-05,Istanbul Airport (IST),Turkey,Turkish Airlines,TK0812,IST,IKA,Airspace closure - day 6,Boeing 737-900ER
+2026-03-05,Sheremetyevo International (SVO),Russia,Aeroflot,SU0514,SVO,MHD,Airspace advisory,Airbus A320-200
+2026-03-06,Dubai International (DXB),UAE,Emirates,EK0924,DXB,IKA,Airspace still closed,Boeing 777-300ER
+2026-03-06,Muscat International (MCT),Oman,Oman Air,WY0820,MCT,IFN,Destination airspace closure,Boeing 737-800
+2026-03-06,Amman Queen Alia (AMM),Jordan,Royal Jordanian,RJ0210,AMM,IKA,Airspace closed,Airbus A319-100
+2026-03-07,Hamad International (DOH),Qatar,Qatar Airways,QR0510,DOH,IKA,Airspace closure Day 8,Airbus A350-900
+2026-03-07,King Abdulaziz International (JED),Saudi Arabia,Saudia,SV0900,JED,IKA,Airspace closure Day 8,Boeing 777-300ER
+2026-03-07,Dubai International (DXB),UAE,Emirates,EK0932,DXB,IKA,Airspace closure Day 8,Boeing 777-200LR
+2026-03-07,Heathrow (LHR),UK,British Airways,BA0160,LHR,DXB,Gulf sector precautionary advisory,Boeing 777-300ER
+2026-03-07,Frankfurt (FRA),Germany,Lufthansa,LH0602,FRA,DXB,Precautionary Gulf sector deviation,Airbus A350-900
