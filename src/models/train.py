@@ -28,7 +28,6 @@ from sklearn.metrics import (
     r2_score,
 )
 from sklearn.model_selection import KFold, cross_val_score, train_test_split
-from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
 from src.config import (

@@ -3,7 +3,7 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![CI](https://github.com/Muhammad-Farooq-13/iran-airspace-crisis/actions/workflows/ci.yml/badge.svg)](https://github.com/Muhammad-Farooq-13/iran-airspace-crisis/actions)
+[![CI](https://github.com/Muhammad-Farooq13/Iran-airspace-crisis/actions/workflows/ci.yml/badge.svg)](https://github.com/Muhammad-Farooq13/Iran-airspace-crisis/actions)
 
 > **A complete, production-grade data science project** analysing the global aviation impact of the Iran Airspace Crisis (February–March 2026) and predicting airline financial losses using machine learning.
 
@@ -86,7 +86,7 @@ iran-airspace-crisis/
 
 ### 1. Clone and install
 ```bash
-git clone https://github.com/Muhammad-Farooq-13/iran-airspace-crisis.git
+git clone https://github.com/Muhammad-Farooq13/Iran-airspace-crisis.git
 cd iran-airspace-crisis
 python -m venv .venv
 # Windows: .venv\Scripts\activate  |  Linux/Mac: source .venv/bin/activate
@@ -232,7 +232,7 @@ make typecheck
 
 ## License
 
-MIT © 2026 [Muhammad Farooq](https://github.com/Muhammad-Farooq-13)
+MIT © 2026 [Muhammad Farooq](https://github.com/Muhammad-Farooq13)
 
 ---
 
@@ -240,4 +240,4 @@ MIT © 2026 [Muhammad Farooq](https://github.com/Muhammad-Farooq-13)
 
 **Muhammad Farooq**  
 📧 [mfarooqshafee333@gmail.com](mailto:mfarooqshafee333@gmail.com)  
-🐙 [github.com/Muhammad-Farooq-13](https://github.com/Muhammad-Farooq-13)
+🐙 [github.com/Muhammad-Farooq13](https://github.com/Muhammad-Farooq13)
