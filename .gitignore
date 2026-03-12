@@ -26,6 +26,9 @@ data/features/
 models/*.pkl
 models/*.json
 models/*.csv
+!models/iran_demo.pkl
+!models/demo_countries.json
+!models/.gitkeep
 
 # Reports (regenerate with notebooks)
 reports/figures/

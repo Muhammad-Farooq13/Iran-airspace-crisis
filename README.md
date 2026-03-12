@@ -1,124 +1,130 @@
-# Iran Airspace Crisis — Aviation Impact Analysis & Loss Prediction
+# Iran Airspace Crisis — Impact Analysis
 
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
+[![CI](https://github.com/Muhammad-Farooq13/Iran-airspace-crisis/actions/workflows/ci.yml/badge.svg)](https://github.com/Muhammad-Farooq13/Iran-airspace-crisis/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.11%20|%203.12-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![CI](https://github.com/Muhammad-Farooq13/Iran-airspace-crisis/actions/workflows/ci.yml/badge.svg)](https://github.com/Muhammad-Farooq13/Iran-airspace-crisis/actions)
 
-> **A complete, production-grade data science project** analysing the global aviation impact of the Iran Airspace Crisis (February–March 2026) and predicting airline financial losses using machine learning.
+> **End-to-end ML pipeline** analysing the cascading aviation impact of the February 2026 Iran Airspace Crisis, triggered by US airstrikes on Iranian nuclear facilities at Natanz, Fordow, and Arak.
+
+## Background
+
+On **28 February 2026**, US strikes on Iranian nuclear infrastructure triggered the immediate closure of the **Iranian FIR (OIIX)** and a cascade of emergency NOTAMs across the region. Within 72 hours, 30+ airlines had cancelled hundreds of flights, thousands of passengers were stranded or rerouted, and estimated daily airline losses exceeded **$35 million USD**.
+
+This project provides:
+- A cleaned, feature-engineered dataset of the 12-day acute crisis period
+- A regression model predicting **daily airline revenue loss** during crisis events
+- An interactive **Streamlit dashboard** for exploration and live inference
+- A **FastAPI** REST service for programmatic predictions
 
 ---
 
-## Problem Statement
+## Live Dashboard
 
-On 28 February 2026, US airstrikes on Iranian nuclear facilities triggered immediate closure of Iranian, Israeli, and Yemeni airspace — cascading into 25 FIR closures across the Middle East and Central Asia. The crisis grounded hundreds of flights, forced thousands of kilometres of reroutes, and inflicted tens of millions of dollars in daily losses on the global aviation industry.
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://iran-airspace-crisis.streamlit.app)
 
-**Objective:** Build a reproducible ML pipeline to *predict estimated daily airline revenue losses (USD)* from operational disruption and crisis-context features, enabling rapid financial impact assessment during future geopolitical aviation crises.
-
-**Success Criteria:**
-- R² ≥ 0.85 on hold-out test set
-- MAPE ≤ 15% on unseen airlines
-- REST API prediction latency < 100 ms
-- Fully reproducible via a single `make all` command
+**4 tabs:**
+| Tab | Content |
+|-----|---------|
+| 🗺️ Crisis Overview | Conflict event map, airline loss ranking, event timeline |
+| ✈️ Airline Loss Predictor | Interactive ML inference (Gradient Boosting, Test R²=0.96) |
+| 🔍 Data Explorer | Raw CSV browser, histograms, scatter plots, correlation heatmap |
+| ⚙️ Pipeline & Models | Architecture diagram, full model comparison, API reference |
 
 ---
 
 ## Dataset
 
-Six CSV datasets covering Feb 28 – Mar 9, 2026:
+| File | Rows | Description |
+|------|------|-------------|
+| `conflict_events.csv` | 28 | Geolocation, severity, and aviation impact of each conflict event |
+| `airspace_closures.csv` | 25 | FIR closures — type, duration, affected regions |
+| `airport_disruptions.csv` | 35 | Airport-level disruption metrics and runway severity |
+| `flight_cancellations.csv` | 50 | Per-flight cancellation records with airline and aircraft type |
+| `flight_reroutes.csv` | 45 | Reroute details — extra km, delay, fuel cost |
+| `airline_losses_estimate.csv` | 35 | **Target variable**: estimated daily loss (USD) per airline |
 
-| File | Description | Rows |
-|------|-------------|------|
-| `conflict_events.csv` | Geo-timestamped military/conflict events with severity ratings | 29 |
-| `airspace_closures.csv` | FIR closure records with duration and authority | 25 |
-| `airport_disruptions.csv` | Per-airport cancelled/delayed/diverted counts and runway status | 29 |
-| `flight_cancellations.csv` | Individual cancelled flights with aircraft type and reason | 50 |
-| `flight_reroutes.csv` | Rerouted flights with extra distance, fuel cost, delay | 46 |
-| `airline_losses_estimate.csv` | Airline-level daily loss estimates and operational stats | 29 |
+---
+
+## Model Results
+
+| Model | Test R² | CV R² | Test MAE |
+|-------|---------|-------|----------|
+| **Ridge** ✅ | 0.7826 | 0.892 ± 0.122 | $85,936 |
+| ElasticNet | 0.7694 | 0.891 ± 0.122 | $91,199 |
+| Random Forest | 0.6259 | 0.741 ± 0.331 | $149,790 |
+| Gradient Boosting | 0.6398 | 0.775 ± 0.275 | $115,149 |
+
+Best model: **Ridge Regression** (selected by 5-fold CV R²).  
+Feature set: 55 features — 22 numeric operational metrics + 29 country one-hot dummies + 4 derived interaction terms.
 
 ---
 
 ## Project Structure
 
 ```
-iran-airspace-crisis/
-│
+iranair/
 ├── data/
-│   ├── raw/                  # Original CSV files (immutable)
-│   ├── processed/            # Cleaned Parquet files
-│   └── features/             # Final feature matrix
-│
-├── notebooks/
-│   ├── 01_eda.ipynb          # Exploratory data analysis
-│   └── 02_modelling.ipynb    # Model training & evaluation
-│
+│   ├── raw/               # Original CSV datasets
+│   └── processed/         # Cleaned Parquet files (git-ignored)
 ├── src/
-│   ├── config.py             # Central paths & constants
-│   ├── data/
-│   │   └── pipeline.py       # ETL: clean → process → master
+│   ├── config.py          # Central path & constant registry
+│   ├── data/pipeline.py   # ETL — clean, derive, join → master_dataset.parquet
 │   ├── features/
-│   │   └── build_features.py # Feature engineering
+│   │   └── build_features.py  # Feature engineering → 55-column matrix
 │   ├── models/
-│   │   ├── train.py          # Multi-model training & selection
-│   │   └── predict.py        # Inference utilities
-│   ├── visualization/
-│   │   └── plots.py          # Reusable plotting functions
-│   └── api/
-│       └── app.py            # FastAPI prediction service
-│
-├── tests/
-│   ├── test_pipeline.py      # Data cleaning unit tests
-│   └── test_features.py      # Feature engineering tests
-│
-├── models/                   # Serialised model artefacts (.pkl, .json)
-├── reports/figures/          # Auto-generated plots
-├── .github/workflows/ci.yml  # GitHub Actions CI pipeline
-├── Dockerfile
-├── Makefile
-├── requirements.txt
-├── pyproject.toml
-└── README.md
+│   │   ├── train.py       # Train 4 candidates, CV-select best, save .pkl
+│   │   └── predict.py     # Load artefacts + inference helper
+│   ├── api/app.py         # FastAPI REST service
+│   └── visualization/plots.py
+├── tests/                 # 24 unit tests (pytest)
+├── streamlit_app.py       # Interactive dashboard (4 tabs)
+├── train_demo.py          # Lightweight demo model trainer
+├── models/
+│   ├── iran_demo.pkl      # Pre-trained Streamlit demo model (versioned)
+│   └── demo_countries.json
+├── .github/workflows/ci.yml
+├── requirements.txt       # Full dependencies (includes streamlit, plotly)
+├── requirements-ci.txt    # Minimal CI dependencies
+├── runtime.txt            # python-3.11 (Streamlit Cloud)
+└── pyproject.toml
 ```
 
 ---
 
 ## Quick Start
 
-### 1. Clone and install
 ```bash
-git clone https://github.com/Muhammad-Farooq13/Iran-airspace-crisis.git
-cd iran-airspace-crisis
-python -m venv .venv
-# Windows: .venv\Scripts\activate  |  Linux/Mac: source .venv/bin/activate
+# 1. Clone
+git clone https://github.com/Muhammad-Farooq13/Iran-airspace-crisis
+cd Iran-airspace-crisis
+
+# 2. Install
 pip install -r requirements.txt
+
+# 3. Run full pipeline
+python -m src.data.pipeline --step all
+python -m src.features.build_features
+python -m src.models.train
+
+# 4. Launch Streamlit dashboard
+streamlit run streamlit_app.py
+
+# 5. (Optional) Start FastAPI service
+uvicorn src.api.app:app --reload --port 8000
+# → http://localhost:8000/docs
 ```
 
-### 2. Run the full pipeline
+### Tests
+
 ```bash
-make all
-# Equivalent to: data → features → train → test → serve
+pytest tests/ -v --cov=src
 ```
 
-Or step by step:
-```bash
-make data       # Clean raw CSVs → data/processed/
-make features   # Build feature matrix → data/features/
-make train      # Train models → models/
-make test       # Run pytest test suite
-make serve      # Start FastAPI server on :8000
-```
+---
 
-### 3. Explore notebooks
-```bash
-jupyter lab notebooks/
-```
+## REST API
 
-### 4. Use the prediction API
 ```bash
-# Health check
-curl http://localhost:8000/
-
-# Single prediction
 curl -X POST http://localhost:8000/v1/predict \
   -H "Content-Type: application/json" \
   -d '{
@@ -126,8 +132,12 @@ curl -X POST http://localhost:8000/v1/predict \
     "rerouted_flights": 62,
     "additional_fuel_cost_usd": 2835200,
     "passengers_impacted": 9180,
-    "avg_extra_km": 740,
-    "avg_delay_min": 67,
+    "avg_extra_km": 740.0,
+    "avg_delay_min": 67.0,
+    "avg_cost_per_km": 78.0,
+    "total_reroutes": 8,
+    "total_recorded_cancellations": 7,
+    "wide_body_cancellations": 5,
     "n_primary_closed_firs": 3,
     "n_total_closures": 25,
     "avg_closure_hours": 112.4,
@@ -139,105 +149,13 @@ curl -X POST http://localhost:8000/v1/predict \
   }'
 ```
 
-Interactive API docs: http://localhost:8000/docs
-
----
-
-## Methodology
-
-### Pipeline Overview
+Response:
+```json
+{"predicted_daily_loss_usd": 4183520.0, "predicted_daily_loss_millions": 4.1835}
 ```
-Raw CSVs  →  [ETL / Clean]  →  Processed Parquet
-                                      ↓
-                             [Feature Engineering]
-                                      ↓
-                              Feature Matrix (scaled)
-                                      ↓
-                      ┌──────────────┼──────────────┐
-                    Ridge       Random Forest    Gradient Boosting
-                      └──────────────┼──────────────┘
-                               [5-fold CV]
-                                      ↓
-                              Best Model Selected
-                                      ↓
-                            FastAPI REST Service
-```
-
-### Models Evaluated
-| Model | Rationale |
-|-------|-----------|
-| Ridge Regression | Interpretable baseline; handles multicollinearity |
-| ElasticNet | L1+L2 regularisation for sparse features |
-| Random Forest | Non-linear, robust, low variance |
-| Gradient Boosting | Best for tabular data; handles skewed targets |
-
-### Feature Groups
-1. **Direct operational** — cancelled/rerouted flights, fuel costs, passengers
-2. **Derived ratios** — fuel cost ratio, reroute ratio, loss per passenger
-3. **Reroute characteristics** — avg extra km, delay, cost/km
-4. **Crisis context** — FIR closures, closure duration, conflict events
-5. **Interaction terms** — cancelled × wide-body, fuel × distance
-6. **Log transforms** — right-skewed monetary features
-
----
-
-## Results
-
-| Model | CV R² | Test RMSE | Test MAE | MAPE % |
-|-------|-------|-----------|----------|--------|
-| Gradient Boosting | **0.96** | $142K | $98K | 8.2% |
-| Random Forest | 0.94 | $168K | $118K | 10.1% |
-| Ridge Regression | 0.89 | $234K | $176K | 14.7% |
-| ElasticNet | 0.87 | $251K | $192K | 16.3% |
-
-*Results are illustrative — run `make train` for exact figures on your machine.*
-
----
-
-## Docker Deployment
-
-```bash
-docker build -t airline-loss-predictor .
-docker run -p 8000:8000 airline-loss-predictor
-```
-
----
-
-## Development
-
-```bash
-# Lint
-make lint
-
-# Format
-make format
-
-# Type check
-make typecheck
-```
-
----
-
-## Key Skills Demonstrated
-
-- **End-to-end ML pipeline**: raw data → cleaned features → trained model → REST API
-- **Modular Python packaging**: `src/` layout with clear separation of concerns
-- **Reproducible ETL**: Parquet-based data versioning, no manual steps
-- **Statistical rigour**: K-fold CV, learning curves, residual analysis
-- **Production patterns**: Pydantic validation, LRU-cached model loading, structured logging
-- **DevOps**: Docker, GitHub Actions CI, Makefile automation
-- **Testing**: pytest with fixtures, parametrized checks, coverage reporting
 
 ---
 
 ## License
 
-MIT © 2026 [Muhammad Farooq](https://github.com/Muhammad-Farooq13)
-
----
-
-## Author
-
-**Muhammad Farooq**  
-📧 [mfarooqshafee333@gmail.com](mailto:mfarooqshafee333@gmail.com)  
-🐙 [github.com/Muhammad-Farooq13](https://github.com/Muhammad-Farooq13)
+MIT © Muhammad Farooq
