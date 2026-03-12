@@ -346,7 +346,6 @@ with tab3:
                                      index=min(1, len(numeric_cols)-1), key="y_col")
                 fig_sc = px.scatter(df_exp, x=x_col, y=y_col,
                                     title=f"{x_col} vs {y_col}",
-                                    trendline="ols" if len(df_exp) > 4 else None,
                                     color_discrete_sequence=["#3498db"])
                 st.plotly_chart(fig_sc, use_container_width=True)
 
